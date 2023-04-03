@@ -3,7 +3,7 @@ package models.entities;
 
 import models.enums.PlayerType;
 
-public class Player {
+public class Player implements Comparable<Player>{
     private String name;
     private Integer wins;
     private Integer looses;
@@ -59,5 +59,36 @@ public class Player {
         this.draws = draws;
     }
 
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Player other = (Player) obj;
+        if (name == null) {
+            if (other.name != null)
+                return false;
+        } else if (!name.equals(other.name))
+            return false;
+        return true;
+    }
+
+
+    @Override
+    public int compareTo(Player o) {
+        return -wins.compareTo(o.getWins());
+    }
+    
 
 }
