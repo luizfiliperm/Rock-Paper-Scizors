@@ -10,6 +10,7 @@ public class Player implements Comparable<Player>{
     private Integer draws;
     private PlayerType playerType;
     
+    // Esse construtor tem o intuito de criar um player "real"
     public Player(String name, Integer wins, Integer looses, Integer draws) {
         this.name = name;
         this.wins = wins;
@@ -18,6 +19,7 @@ public class Player implements Comparable<Player>{
         this.playerType = PlayerType.PERSON;
     }
 
+    // Esse construtor tem o intuito de criar um player controlado pela máquina, onde passaremos como argumento o "PlayerType.COMPUTER"
     public Player(String name, Integer wins, Integer looses, Integer draws, PlayerType playerType) {
         this.name = name;
         this.wins = wins;
@@ -84,7 +86,7 @@ public class Player implements Comparable<Player>{
         return true;
     }
 
-
+    // Vai comparar pelas vitórias pra ordenar no placar de líder por quem tem mais vitórias
     @Override
     public int compareTo(Player o) {
         return -wins.compareTo(o.getWins());
