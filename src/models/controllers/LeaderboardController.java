@@ -1,4 +1,4 @@
-package panels;
+package models.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -52,8 +52,5 @@ public class LeaderboardController implements Initializable {
             tbLeaderboard.setItems(items);
         }
     }
-
-
-
 
 }

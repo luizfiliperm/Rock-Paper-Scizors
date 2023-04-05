@@ -38,7 +38,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="panels.LeaderboardController">
+<VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="models.controllers.LeaderboardController">
    <children>
       <Label fx:id="tittle" alignment="TOP_CENTER" text="Placares de Líderes" textAlignment="CENTER">
          <font>
