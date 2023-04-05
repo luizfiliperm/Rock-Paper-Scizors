@@ -18,6 +18,8 @@ public class Files {
     // Instancia a lista de jogadores, que serão lidas do arquivo "Leaderboard.csv"
     public Files() {
         this.players = new ArrayList<>();
+        readLeaderBoard();
+        
     }
 
     public List<Player> getPlayers(){
@@ -55,6 +57,7 @@ public class Files {
                 Integer draws = Integer.parseInt(fields[3]);
 
                 players.add(new Player(name, wins, loses, draws));
+                Collections.sort(players); // Vai organizar a lista, por quem tem mais vitórias pra quem tem menos
             }
 
         }catch(IOException  e){
