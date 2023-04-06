@@ -12,19 +12,11 @@ public class Player implements Comparable<Player>{
     private PlayerType playerType;
     private Files file;
 
-    // Esse construtor tem o intuito de criar um player "real", recebendo seu nome
-    public Player(String name) {
-        file = new Files();
-        this.playerType = PlayerType.PERSON;
+    // Construtor 
+    public Player(String name, PlayerType playerType) {
         this.name = name;
-        setPlayerStatus();
-    }
-
-    // Esse construtor tem o intuito de criar um player controlado pela máquina, onde passaremos como argumento o "PlayerType.COMPUTER"
-    public Player(PlayerType playerType) {
-        file = new Files();
-        this.name = "Computador";
         this.playerType = playerType;
+        file = new Files();
         setPlayerStatus();
     }
 
@@ -35,6 +27,17 @@ public class Player implements Comparable<Player>{
         this.looses = looses;
         this.draws = draws;
     }
+
+    // Cria um player "real", recebendo seu nome
+    public static Player createRealPlayer(String name){
+        return new Player(name, PlayerType.PERSON);
+    }
+
+    // Cria o player controlado pela máquina
+    public static Player createComputerPlayer() {
+        return new Player("Computador", PlayerType.COMPUTER);
+    }
+
 
     public String getName() {
         return name;
@@ -61,12 +64,24 @@ public class Player implements Comparable<Player>{
         this.wins = wins;
     }
 
+    public void incremateWins(){
+        wins++;
+    }
+
     public void setLooses(Integer looses) {
         this.looses = looses;
     }
 
+    public void incremateLooses(){
+        looses++;
+    }
+
     public void setDraws(Integer draws) {
         this.draws = draws;
+    }
+
+    public void incremateDraws(){
+        draws++;
     }
 
     // Esse método vai no arquivo ver se ja existe um player x, se existir seta os atributos existentes, se não existir, seta como 0
