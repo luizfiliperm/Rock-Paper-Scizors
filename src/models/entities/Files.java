@@ -19,7 +19,6 @@ public class Files {
     public Files() {
         this.players = new ArrayList<>();
         readLeaderBoard();
-        
     }
 
     public List<Player> getPlayers(){
@@ -71,6 +70,17 @@ public class Files {
             return true;
         }
         return false;
+    }
+
+    public Player getPlayer(Player player){
+        
+        for(Player p : players){
+            if(p.equals(player)){
+                return p;
+            }
+        }
+        return null;
+        
     }
 
     // Vai atualizar o placar recebendo um player como parâmetro
