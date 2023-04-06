@@ -70,7 +70,7 @@ public class Player implements Comparable<Player>{
 
     // Esse método vai no arquivo ver se ja existe um player x, se existir seta os atributos existentes, se não existir, seta como 0
     public void setPlayerStatus(){
-        if(!file.playerExists(this)){
+        if(file.playerExists(this)){
             Player auxPlayer = file.getPlayer(this);
             setWins(auxPlayer.getWins());
             setLooses(auxPlayer.getLooses());
