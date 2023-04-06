@@ -46,10 +46,9 @@ public class Game {
         this.optionP2 = optionP2;
     }
     
-    // Retorna o player vencedor, checkando as opções
     public Player getWinner(){
 
-        if(optionP1 == optionP2){
+        if(optionP1.equals(optionP2)){
             return null;
         }
         else if(optionP1 == Option.PAPER && optionP2 == Option.ROCK ||
@@ -61,14 +60,33 @@ public class Game {
         }
     }
 
-
-    // Checka qual dos players é o computador, e define a opção baseada nisso
+    // Escolhe a opção do computador
     public void setComputerOption(){
         if(player1.getPlayerType() == PlayerType.COMPUTER){
             setOptionP1(Option.getRandomOption());
         }
         if(player2.getPlayerType() == PlayerType.COMPUTER){
             setOptionP2(Option.getRandomOption());
+        }
+    }
+
+
+    // Atualiza atributo dos players
+    public void updatePlayerAtributes(){
+        if(getWinner() == null){
+            player1.incremateDraws();
+            player2.incremateDraws();
+
+        }
+        else if(getWinner().equals(player1)){
+            player1.incremateWins();
+            player2.incremateLooses();
+
+        }
+        else if(getWinner().equals(player2)){
+            player2.incremateWins();
+            player1.incremateLooses();
+
         }
     }
 }
