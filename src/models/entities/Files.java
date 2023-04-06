@@ -121,4 +121,10 @@ public class Files {
             e.printStackTrace();
         }
     }
+
+    public void updateAll(Player p1, Player p2){
+        updateLeaderboard(p1);
+        updateLeaderboard(p2);
+        updateCsv();
+    }
 }
