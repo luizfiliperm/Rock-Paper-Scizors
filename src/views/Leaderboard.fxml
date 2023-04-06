@@ -32,29 +32,41 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="models.controllers.LeaderboardController">
    <children>
-      <Label fx:id="tittle" alignment="TOP_CENTER" text="Placares de Líderes" textAlignment="CENTER">
-         <font>
-            <Font size="44.0" />
-         </font>
-      </Label>
-      <TableView fx:id="tbLeaderboard" fixedCellSize="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="300.0">
-         <columns>
-            <TableColumn fx:id="cName" resizable="false" prefWidth="75.0" reorderable="false" sortable="false" text="Nome" />
-            <TableColumn fx:id="cWin" resizable="false" prefWidth="75.0" reorderable="false" sortable="false" text="Vitórias" />
-            <TableColumn fx:id="cLoose" resizable="false" prefWidth="75.0" reorderable="false" sortable="false" text="Derrotas" />
-            <TableColumn fx:id="cDraw" resizable="false" prefWidth="75.0" reorderable="false" sortable="false" text="Empates" />
-         </columns>
-         <columnResizePolicy>
-            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-         </columnResizePolicy>
-      </TableView>
+      <AnchorPane prefHeight="530.0" prefWidth="934.0">
+         <children>
+            <ScrollPane layoutX="294.0" layoutY="108.0" prefHeight="416.0" prefWidth="317.0">
+               <content>
+                  <TableView fx:id="tbLeaderboard" fixedCellSize="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-table-cell-border-color: transparent;">
+                     <columns>
+                        <TableColumn fx:id="cName" prefWidth="75.0" reorderable="false" resizable="false" sortable="false" text="Nome" />
+                        <TableColumn fx:id="cWin" prefWidth="75.0" reorderable="false" resizable="false" sortable="false" text="Vitórias" />
+                        <TableColumn fx:id="cLoose" prefWidth="75.0" reorderable="false" resizable="false" sortable="false" text="Derrotas" />
+                        <TableColumn fx:id="cDraw" prefWidth="75.0" reorderable="false" resizable="false" sortable="false" text="Empates" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </content>
+            </ScrollPane>
+            <Button fx:id="BtBack" layoutX="45.0" layoutY="514.0" mnemonicParsing="false" onAction="#BacktoMenu" text="Voltar" />
+            <Label fx:id="tittle" alignment="TOP_CENTER" layoutX="266.0" layoutY="25.0" text="Placares de Líderes" textAlignment="CENTER">
+               <font>
+                  <Font size="44.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </VBox>
