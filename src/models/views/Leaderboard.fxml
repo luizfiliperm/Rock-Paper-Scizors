@@ -41,9 +41,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="models.controllers.ChooseNameController">
+<VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="models.controllers.LeaderboardController">
    <children>
-      <AnchorPane prefHeight="530.0" prefWidth="934.0">
+      <AnchorPane fx:id="root" prefHeight="530.0" prefWidth="934.0">
          <children>
             <ScrollPane layoutX="294.0" layoutY="108.0" prefHeight="416.0" prefWidth="317.0">
                <content>

@@ -14,12 +14,16 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import models.entities.Files;
 import models.entities.Player;
 
 public class LeaderboardController implements Initializable {
 
     ScreenMethods sm = new ScreenMethods();
+
+    @FXML
+    private AnchorPane root;
 
     @FXML
     private Button BtBack;
@@ -54,9 +58,8 @@ public class LeaderboardController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resources){
         Files players = new Files();
-        
-        if(items.isEmpty()){
 
+        if(items.isEmpty()){
             items.addAll(players.getPlayers());
             
             cName.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -68,8 +71,5 @@ public class LeaderboardController implements Initializable {
         }
         players.updateCsv();
     }
-
-
-
 
 }
