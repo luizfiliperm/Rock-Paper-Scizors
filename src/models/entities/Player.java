@@ -16,6 +16,7 @@ public class Player implements Comparable<Player>{
     public Player(String name) {
         file = new Files();
         this.playerType = PlayerType.PERSON;
+        this.name = name;
         setPlayerStatus();
     }
 
