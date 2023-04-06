@@ -1,12 +1,15 @@
 package models.controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -16,6 +19,11 @@ import models.entities.Player;
 
 public class LeaderboardController implements Initializable {
 
+    ScreenMethods sm = new ScreenMethods();
+
+    @FXML
+    private Button BtBack;
+    
     @FXML
     private TableView<Player> tbLeaderboard;
 
@@ -36,6 +44,13 @@ public class LeaderboardController implements Initializable {
 
     private ObservableList<Player> items = FXCollections.observableArrayList();
 
+
+    @FXML
+    void backToMenu(ActionEvent event) throws IOException {
+        sm.changeScreen("Menu.fxml", event);
+    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resources){
         Files players = new Files();
@@ -51,6 +66,10 @@ public class LeaderboardController implements Initializable {
             
             tbLeaderboard.setItems(items);
         }
+        players.updateCsv();
     }
+
+
+
 
 }

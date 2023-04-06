@@ -12,6 +12,9 @@ public class MenuController {
     ScreenMethods sm = new ScreenMethods();
 
     @FXML
+    private Button btChangeName;
+
+    @FXML
     private Button btLeaderBoard;
 
     @FXML

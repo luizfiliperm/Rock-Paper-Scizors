@@ -12,7 +12,7 @@ import javafx.scene.Node;
 public class ScreenMethods {
     
     public void changeScreen(String path, ActionEvent event) throws IOException{
-        path = "../../panels/" + path;
+        path = "../views/" + path;
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(path));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
@@ -20,7 +20,7 @@ public class ScreenMethods {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         
         stage.setResizable(false);
-        stage.setTitle("PEDRA PAPEL FACA");
+        stage.setTitle("PEDRA PAPEL TESOURA");
         stage.setScene(scene);
         stage.show();
     }
