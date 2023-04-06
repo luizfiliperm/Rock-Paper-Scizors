@@ -13,7 +13,7 @@ import java.util.List;
 public class Files {
 
     private List<Player> players;
-    private File leaderBoard = new File("Leaderboard.csv");
+    private File leaderBoard = new File("src/Leaderboard.csv");
 
     // Instancia a lista de jogadores, que serão lidas do arquivo "Leaderboard.csv"
     public Files() {
