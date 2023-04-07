@@ -88,6 +88,16 @@
                </font>
             </Label>
             <Button fx:id="btBack" layoutX="48.0" layoutY="492.0" mnemonicParsing="false" onAction="#changeToMenuScreen" text="Voltar" />
+            <Label fx:id="lOptionP1" alignment="CENTER" layoutX="121.0" layoutY="54.0" prefHeight="54.0" prefWidth="124.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="lOptionP2" alignment="CENTER" layoutX="651.0" layoutY="54.0" prefHeight="54.0" prefWidth="124.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
   </children>
 </VBox>

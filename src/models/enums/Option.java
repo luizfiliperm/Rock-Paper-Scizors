@@ -3,9 +3,9 @@ package models.enums;
 import java.util.Random;
 
 public enum Option {
-    ROCK,
-    PAPER,
-    SCISSORS;
+    Rock,
+    Paper,
+    Scissors;
 
     private static final Random random = new Random();
 

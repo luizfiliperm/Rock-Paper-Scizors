@@ -24,7 +24,7 @@ public class GameController implements Initializable {
     private Files file;
 
     @FXML
-    private AnchorPane root;
+    private Button btBack;
 
     @FXML
     private Button btPaper;
@@ -36,10 +36,10 @@ public class GameController implements Initializable {
     private Button btScissors;
 
     @FXML
-    private Label lwinnerName;
+    private Label lOptionP1;
 
     @FXML
-    private Label lScore;
+    private Label lOptionP2;
 
     @FXML
     private Label lPlayer1;
@@ -47,23 +47,32 @@ public class GameController implements Initializable {
     @FXML
     private Label lPlayer2;
 
+    @FXML
+    private Label lScore;
+
+    @FXML
+    private Label lwinnerName;
+
+    @FXML
+    private AnchorPane root;
+
     public void setGame(Game game){
         this.game = game;
     }
 
     @FXML
     void choosePaper(ActionEvent event) {
-        peformTurn(Option.PAPER);
+        peformTurn(Option.Paper);
     }
 
     @FXML
     void chooseRock(ActionEvent event) {
-        peformTurn(Option.ROCK);
+        peformTurn(Option.Rock);
     }
 
     @FXML
     void chooseScissors(ActionEvent event) {
-        peformTurn(Option.SCISSORS);
+        peformTurn(Option.Scissors);
     }
 
     @FXML
@@ -77,6 +86,7 @@ public class GameController implements Initializable {
         game.setOptionP1(option);
         game.setComputerOption();
         game.updatePlayerAtributes();
+        setOptions();
         setScore();
         setWinner();
     }
@@ -92,6 +102,11 @@ public class GameController implements Initializable {
         }else{
             lwinnerName.setText(game.getWinner().getName());
         }
+    }
+
+    public void setOptions(){        
+        lOptionP1.setText(String.valueOf(game.getOptionP1()));
+        lOptionP2.setText(String.valueOf(game.getOptionP2()));
     }
 
     @Override

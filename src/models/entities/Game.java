@@ -79,9 +79,9 @@ public class Game {
         if(optionP1.equals(optionP2)){
             return null;
         }
-        else if(optionP1 == Option.PAPER && optionP2 == Option.ROCK ||
-           optionP1 == Option.ROCK && optionP2 == Option.SCISSORS ||
-           optionP1 == Option.SCISSORS && optionP2 == Option.PAPER){
+        else if(optionP1 == Option.Paper && optionP2 == Option.Rock ||
+           optionP1 == Option.Rock && optionP2 == Option.Scissors ||
+           optionP1 == Option.Scissors && optionP2 == Option.Paper){
             return player1;
         }else{
             return player2;
