@@ -86,8 +86,8 @@ public class GameController implements Initializable {
     }
 
     public void setScore(){
-        String score = String.format("%d X %d", game.getPlayer1().getWins(), game.getPlayer2().getWins());
-        lScore.setText(score);
+        game.incremateScore(game.getWinner());
+        lScore.setText(game.getScore());
     }
 
     public void setWinner(){
@@ -103,7 +103,7 @@ public class GameController implements Initializable {
         game = new Game(Player.createRealPlayer(ChooseNameController.getPlayerName()), Player.createComputerPlayer());
         lPlayer1.setText(game.getPlayer1().getName());
         lPlayer2.setText(game.getPlayer2().getName());
-        setScore();
+        lScore.setText(game.getScore());
     }
 
 }

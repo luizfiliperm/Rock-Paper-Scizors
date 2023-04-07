@@ -13,7 +13,7 @@ public class Game {
     public Game(Player player1, Player player2) {
         this.player1 = player1;
         this.player2 = player2;
-        this.score = "0x0";
+        this.score = "0 X 0";
     }
 
     public Player getPlayer1() {
@@ -59,12 +59,16 @@ public class Game {
     public void incremateScore(Player winner) {
         Integer scoreP1 = Integer.parseInt(score.substring(0,score.indexOf(" ")));
         Integer scoreP2 = Integer.parseInt(score.substring(score.lastIndexOf(" ") + 1, score.length()));
+        if(winner == null){
 
-        if(winner.equals(player1)){
+        }
+        else if(winner.equals(player1)){
             scoreP1++;
-        }else if(winner.equals(player2)){
+        }
+        else if(winner.equals(player2)){
             scoreP2++;
         }
+        
 
         setScore(String.format("%d X %d", scoreP1, scoreP2)); 
     }
