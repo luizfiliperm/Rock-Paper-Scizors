@@ -53,29 +53,17 @@ public class GameController implements Initializable {
 
     @FXML
     void choosePaper(ActionEvent event) {
-        game.setOptionP1(Option.PAPER);
-        game.setComputerOption();
-        game.updatePlayerAtributes();
-        setScore();
-        setWinner();
+        peformTurn(Option.PAPER);
     }
 
     @FXML
     void chooseRock(ActionEvent event) {
-        game.setOptionP1(Option.ROCK);
-        game.setComputerOption();
-        game.updatePlayerAtributes();
-        setScore();
-        setWinner();
+        peformTurn(Option.ROCK);
     }
 
     @FXML
     void chooseScissors(ActionEvent event) {
-        game.setOptionP1(Option.SCISSORS);
-        game.setComputerOption();
-        game.updatePlayerAtributes();
-        setScore();
-        setWinner();
+        peformTurn(Option.SCISSORS);
     }
 
     @FXML
@@ -83,6 +71,14 @@ public class GameController implements Initializable {
         file = new Files();
         file.updateAll(game.getPlayer1(), game.getPlayer2());
         sm.changeScreen("Menu.fxml", event);
+    }
+
+    public void peformTurn(Option option){
+        game.setOptionP1(option);
+        game.setComputerOption();
+        game.updatePlayerAtributes();
+        setScore();
+        setWinner();
     }
 
     public void setScore(){
