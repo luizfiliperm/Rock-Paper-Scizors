@@ -10,7 +10,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import models.entities.Files;
 import models.entities.Game;
 import models.entities.Player;
 import models.enums.Option;
@@ -21,7 +20,6 @@ public class GameController implements Initializable {
 
     ScreenMethods sm = new ScreenMethods();
 
-    private Files file;
 
     @FXML
     private Button btBack;
@@ -77,8 +75,7 @@ public class GameController implements Initializable {
 
     @FXML
     void changeToMenuScreen(ActionEvent event) throws IOException {
-        file = new Files();
-        file.updateAll(game.getPlayer1(), game.getPlayer2());
+        game.endGame();
         sm.changeScreen("Menu.fxml", event);
     }
 

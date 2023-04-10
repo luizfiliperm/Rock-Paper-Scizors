@@ -15,7 +15,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import models.entities.Files;
+import models.entities.LeaderboardFile;
 import models.entities.Player;
 
 public class LeaderboardController implements Initializable {
@@ -57,7 +57,7 @@ public class LeaderboardController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resources){
-        Files players = new Files();
+        LeaderboardFile players = new LeaderboardFile();
 
         if(items.isEmpty()){
             items.addAll(players.getPlayers());
