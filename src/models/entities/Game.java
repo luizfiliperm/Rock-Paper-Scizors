@@ -8,13 +8,15 @@ public class Game {
     private Player player2;
     private Option optionP1;
     private Option optionP2;
-    private String score;
+    private Integer scoreP1;
+    private Integer scoreP2;
     private LeaderboardFile leaderboardFile;
     
     public Game(Player player1, Player player2) {
         this.player1 = player1;
         this.player2 = player2;
-        this.score = "0 X 0";
+        this.scoreP1 = 0;
+        this.scoreP2 = 0;
     }
 
     public Player getPlayer1() {
@@ -49,17 +51,27 @@ public class Game {
         this.optionP2 = optionP2;
     }
 
-    public String getScore() {
-        return score;
+    public Integer getScoreP1() {
+        return scoreP1;
     }
 
-    public void setScore(String score){
-        this.score = score;
+    public void setScoreP1(Integer scoreP1) {
+        this.scoreP1 = scoreP1;
+    }
+
+    public Integer getScoreP2() {
+        return scoreP2;
+    }
+
+    public void setScoreP2(Integer scoreP2) {
+        this.scoreP2 = scoreP2;
+    }
+
+    public String getScore(){
+        return String.format("%d X %d", scoreP1, scoreP2);
     }
 
     public void incremateScore(Player winner) {
-        Integer scoreP1 = Integer.parseInt(score.substring(0,score.indexOf(" ")));
-        Integer scoreP2 = Integer.parseInt(score.substring(score.lastIndexOf(" ") + 1, score.length()));
         if(winner == null){
 
         }
@@ -70,8 +82,6 @@ public class Game {
             scoreP2++;
         }
         
-
-        setScore(String.format("%d X %d", scoreP1, scoreP2)); 
     }
     
     
