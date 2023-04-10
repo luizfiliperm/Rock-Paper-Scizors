@@ -10,14 +10,14 @@ public class Player implements Comparable<Player>{
     private Integer looses;
     private Integer draws;
     private PlayerType playerType;
-    private Files file;
 
     // Construtor 
     public Player(String name, PlayerType playerType) {
         this.name = name;
         this.playerType = playerType;
-        file = new Files();
-        setPlayerStatus();
+        this.wins = 0;
+        this.looses = 0;
+        this.draws = 0;
     }
 
     // Construtor que a classe Files vai utilizar
@@ -84,19 +84,6 @@ public class Player implements Comparable<Player>{
         draws++;
     }
 
-    // Esse método vai no arquivo ver se ja existe um player x, se existir seta os atributos existentes, se não existir, seta como 0
-    public void setPlayerStatus(){
-        if(file.playerExists(this)){
-            Player auxPlayer = file.getPlayer(this);
-            setWins(auxPlayer.getWins());
-            setLooses(auxPlayer.getLooses());
-            setDraws(auxPlayer.getDraws());
-        }else{
-            this.wins = 0;
-            this.looses = 0;
-            this.draws = 0;
-        }
-    }
 
     // hashCode e equals vai comparar se um Player é igual ao outro utilizando o nome
     @Override

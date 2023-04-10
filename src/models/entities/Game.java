@@ -9,6 +9,7 @@ public class Game {
     private Option optionP1;
     private Option optionP2;
     private String score;
+    private LeaderboardFile leaderboardFile;
     
     public Game(Player player1, Player player2) {
         this.player1 = player1;
@@ -116,5 +117,10 @@ public class Game {
             player1.incremateLooses();
 
         }
+    }
+
+    public void endGame(){
+        leaderboardFile = new LeaderboardFile();
+        leaderboardFile.updateAll(player1, player2);
     }
 }

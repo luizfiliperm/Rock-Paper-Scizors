@@ -10,13 +10,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Files {
+public class LeaderboardFile {
 
     private List<Player> players;
     private File leaderBoard = new File("src/Leaderboard.csv");
 
     // Instancia a lista de jogadores, que serão lidas do arquivo "Leaderboard.csv"
-    public Files() {
+    public LeaderboardFile() {
         this.players = new ArrayList<>();
         readLeaderBoard();
     }
@@ -92,9 +92,9 @@ public class Files {
             // Se ja existir, vai apenas atualizar a lista
             for(Player p : players){
                 if(p.equals(player)){
-                    p.setDraws(player.getDraws());
-                    p.setWins(player.getWins());
-                    p.setLooses(player.getLooses());
+                    p.setDraws(player.getDraws() + p.getDraws());
+                    p.setWins(player.getWins() + p.getWins());
+                    p.setLooses(player.getLooses() + p.getLooses());
                 }
             }
         }
