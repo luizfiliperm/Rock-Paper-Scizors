@@ -32,11 +32,78 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="models.controllers.RulesController">
    <children>
-      <AnchorPane prefHeight="407.0" prefWidth="640.0" />
+      <AnchorPane prefHeight="407.0" prefWidth="640.0" style="-fx-background-color: #f8f3bf;">
+         <children>
+            <Label layoutX="396.0" layoutY="285.0" text="Ganha de">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="80.0" fitWidth="384.0" layoutX="128.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/regras.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="106.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Então quer dizer que você precisa mesmo de regras pra jogar PEDRA PAPEL E TESOURA???? isso é serio??" textAlignment="JUSTIFY" wrappingWidth="428.13671875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/NicePng_angry-cat-png_1792843.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="295.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pedra2.0.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="520.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/tesoura2.0.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="396.0" layoutY="235.0" text="Ganha de">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="295.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/tesoura2.0.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="520.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/papel2.0.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="295.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/papel2.0.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="396.0" layoutY="335.0" text="Ganha de">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="520.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pedra2.0.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
    </children>
 </VBox>

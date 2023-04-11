@@ -147,7 +147,10 @@
                </graphic>
                <font>
                   <Font size="1.0" />
-               </font></Button>
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             <Label fx:id="lOptionP1" alignment="CENTER" layoutX="44.0" layoutY="54.0" prefHeight="54.0" prefWidth="124.0">
                <font>
                   <Font size="22.0" />
