@@ -32,6 +32,7 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -53,7 +54,10 @@
                         <Image url="@images/placar2.0.png" />
                      </image>
                   </ImageView>
-               </graphic></Button>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             <Button fx:id="btChangeName" layoutX="296.0" layoutY="225.0" mnemonicParsing="false" onAction="#changeScreenChooseName" style="-fx-background-color: none;" text="jogar">
                <font>
                   <Font size="1.0" />
@@ -64,7 +68,10 @@
                         <Image url="@images/jogar2.0.png" />
                      </image>
                   </ImageView>
-               </graphic></Button>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             <Button layoutX="312.0" layoutY="361.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="178.0" style="-fx-background-color: none;" text="sair">
                <font>
                   <Font size="1.0" />
@@ -76,6 +83,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <ImageView fitHeight="281.0" fitWidth="289.0" layoutX="256.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -98,6 +108,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button layoutX="689.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: none;" text="creditos">
                <font>
@@ -110,6 +123,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
     </AnchorPane>

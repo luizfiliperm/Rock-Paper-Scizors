@@ -32,25 +32,66 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fillWidth="false" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="models.controllers.ChooseNameController">
+<VBox fillWidth="false" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #f8f3bf;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="models.controllers.ChooseNameController">
   <children>
     <AnchorPane fx:id="root" maxHeight="-1.0" maxWidth="-1.0" prefHeight="550.0" prefWidth="1007.0" VBox.vgrow="ALWAYS">
          <children>
-            <TextField fx:id="tfName" layoutX="377.0" layoutY="263.0" />
-            <Label layoutX="325.0" layoutY="177.0" text="INSIRA SEU NOME:">
+            <TextField fx:id="tfName" layoutX="296.0" layoutY="226.0" prefHeight="49.0" prefWidth="209.0" />
+            <Label layoutX="67.0" layoutY="108.0" text="INSIRA SEU NOME:">
                <font>
-                  <Font size="30.0" />
+                  <Font size="1.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="259.0" fitWidth="654.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/inserirNome.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Label>
-            <Button fx:id="btPlay" layoutX="428.0" layoutY="336.0" mnemonicParsing="false" onAction="#CreateNewPlayer" text="Jogar" />
-            <Button fx:id="btBacktoMenu" layoutX="14.0" layoutY="511.0" mnemonicParsing="false" onAction="#backToMenu" text="Voltar" />
+            <Button fx:id="btPlay" layoutX="296.0" layoutY="288.0" mnemonicParsing="false" onAction="#CreateNewPlayer" style="-fx-background-color: none;" text="Jogar">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/jogar2.0.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font></Button>
+            <Button fx:id="btBacktoMenu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToMenu" style="-fx-background-color: none;" text="Voltar">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/sair.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font></Button>
+            <ImageView fitHeight="206.0" fitWidth="209.0" layoutX="594.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/player.png" />
+               </image>
+            </ImageView>
          </children></AnchorPane>
   </children>
 </VBox>
