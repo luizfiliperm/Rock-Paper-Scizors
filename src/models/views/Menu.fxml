@@ -39,11 +39,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fillWidth="false" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="models.controllers.MenuController">
+<VBox fillWidth="false" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #f8f3bf;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="models.controllers.MenuController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="592.0" prefWidth="930.0" VBox.vgrow="ALWAYS">
          <children>
-<Button fx:id="btLeaderBoard" layoutX="247.0" layoutY="278.0" mnemonicParsing="false" onAction="#changeScreenLeaderboard" prefHeight="58.0" prefWidth="160.0" style="-fx-background-color: none;" text="placar">
+<Button fx:id="btLeaderBoard" layoutX="297.0" layoutY="285.0" mnemonicParsing="false" onAction="#changeScreenLeaderboard" prefHeight="58.0" prefWidth="160.0" style="-fx-background-color: none;" text="placar">
                <font>
                   <Font size="1.0" />
                </font>
@@ -54,7 +54,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button fx:id="btChangeName" layoutX="246.0" layoutY="212.0" mnemonicParsing="false" onAction="#changeScreenChooseName" style="-fx-background-color: none;" text="jogar">
+            <Button fx:id="btChangeName" layoutX="296.0" layoutY="225.0" mnemonicParsing="false" onAction="#changeScreenChooseName" style="-fx-background-color: none;" text="jogar">
                <font>
                   <Font size="1.0" />
                </font>
@@ -65,11 +65,52 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <ImageView fitHeight="281.0" fitWidth="289.0" layoutX="206.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+            <Button layoutX="312.0" layoutY="361.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="178.0" style="-fx-background-color: none;" text="sair">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/sair2.0.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="281.0" fitWidth="289.0" layoutX="256.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/logo2.0.png" />
                </image>
             </ImageView>
+            <ImageView fitHeight="196.0" fitWidth="207.0" layoutX="604.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Pokemans.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="738.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: none;" text="regras">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/regras2.0.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="689.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: none;" text="creditos">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/creditos2.0.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
     </AnchorPane>
   </children>
