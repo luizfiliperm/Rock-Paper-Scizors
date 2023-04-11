@@ -58,7 +58,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button fx:id="btChangeName" layoutX="296.0" layoutY="225.0" mnemonicParsing="false" onAction="#changeScreenChooseName" style="-fx-background-color: none;" text="jogar">
+            <Button fx:id="btChooseName" layoutX="296.0" layoutY="225.0" mnemonicParsing="false" onAction="#changeScreenChooseName" style="-fx-background-color: none;" text="jogar">
                <font>
                   <Font size="1.0" />
                </font>
@@ -72,7 +72,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button layoutX="312.0" layoutY="361.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="178.0" style="-fx-background-color: none;" text="sair">
+            <Button fx:id="btQuit" layoutX="312.0" layoutY="361.0" mnemonicParsing="false" onAction="#quitGame" prefHeight="39.0" prefWidth="178.0" style="-fx-background-color: none;" text="sair">
                <font>
                   <Font size="1.0" />
                </font>

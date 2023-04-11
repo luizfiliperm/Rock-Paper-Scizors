@@ -4,21 +4,20 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
-
+import javafx.application.Platform;
 
 public class MenuController{
 
     ScreenMethods sm = new ScreenMethods();
 
     @FXML
-    private Button btChangeName;
+    private Button btChooseName;
 
     @FXML
     private Button btLeaderBoard;
 
     @FXML
-    private ImageView buttonImage;
+    private Button btQuit;
 
     @FXML
     void changeScreenLeaderboard(ActionEvent event) throws IOException {
@@ -29,6 +28,11 @@ public class MenuController{
     @FXML
     void changeScreenChooseName(ActionEvent event) throws IOException {
         sm.changeScreen("ChooseName.fxml", event);
+    }
+
+    @FXML
+    void quitGame(ActionEvent event) {
+        Platform.exit();
     }
 
    
