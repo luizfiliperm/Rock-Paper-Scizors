@@ -25,4 +25,17 @@ public class ScreenMethods {
         stage.show();
     }
 
+    public void openPopup(String path) throws IOException{
+        path = "../views/" + path;
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(path));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        
+        Stage popup = new Stage();
+
+        popup.setResizable(false);
+        popup.setTitle("PEDRA PAPEL TESOURA");
+        popup.setScene(scene);
+        popup.show();
+    }
 }

@@ -14,10 +14,17 @@ public class MenuController{
     private Button btChooseName;
 
     @FXML
+    private Button btCredits;
+
+    @FXML
     private Button btLeaderBoard;
 
     @FXML
     private Button btQuit;
+
+    
+    @FXML
+    private Button btRules;
 
     @FXML
     void changeScreenLeaderboard(ActionEvent event) throws IOException {
@@ -29,6 +36,18 @@ public class MenuController{
     void changeScreenChooseName(ActionEvent event) throws IOException {
         sm.changeScreen("ChooseName.fxml", event);
     }
+
+
+    @FXML
+    void openPopupCredits(ActionEvent event) throws IOException {
+        sm.openPopup("Credits.fxml");
+    }
+
+    @FXML
+    void openPopupRules(ActionEvent event) throws IOException{
+        sm.openPopup("Rules.fxml");
+    }
+
 
     @FXML
     void quitGame(ActionEvent event) {

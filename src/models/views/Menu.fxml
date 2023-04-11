@@ -97,7 +97,7 @@
                   <Image url="@images/Pokemans.png" />
                </image>
             </ImageView>
-            <Button layoutX="738.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: none;" text="regras">
+            <Button fx:id="btRules" layoutX="738.0" layoutY="14.0" mnemonicParsing="false" onAction="#openPopupRules" prefWidth="0.0" style="-fx-background-color: none;" text="regras">
                <font>
                   <Font size="1.0" />
                </font>
@@ -106,13 +106,16 @@
                      <image>
                         <Image url="@images/regras2.0.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                </graphic>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="689.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: none;" text="creditos">
+            <Button fx:id="btCredits" layoutX="689.0" layoutY="14.0" mnemonicParsing="false" onAction="#openPopupCredits" prefHeight="38.0" prefWidth="32.0" style="-fx-background-color: none;" text="creditos">
                <font>
                   <Font size="1.0" />
                </font>
@@ -121,6 +124,9 @@
                      <image>
                         <Image url="@images/creditos2.0.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                </graphic>
                <cursor>
