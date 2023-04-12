@@ -9,6 +9,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import models.entities.Game;
 import models.entities.Player;
@@ -33,11 +35,12 @@ public class GameController implements Initializable {
     @FXML
     private Button btScissors;
 
+    
     @FXML
-    private Label lOptionP1;
+    private ImageView ivChooseP1;
 
     @FXML
-    private Label lOptionP2;
+    private ImageView ivChooseP2;
 
     @FXML
     private Label lPlayer1;
@@ -59,17 +62,17 @@ public class GameController implements Initializable {
     }
 
     @FXML
-    void choosePaper(ActionEvent event) {
+    void choosePaper(ActionEvent event) throws IOException{
         peformTurn(Option.Paper);
     }
 
     @FXML
-    void chooseRock(ActionEvent event) {
+    void chooseRock(ActionEvent event)throws IOException {
         peformTurn(Option.Rock);
     }
 
     @FXML
-    void chooseScissors(ActionEvent event) {
+    void chooseScissors(ActionEvent event) throws IOException{
         peformTurn(Option.Scissors);
     }
 
@@ -79,7 +82,7 @@ public class GameController implements Initializable {
         sm.changeScreen("Menu.fxml", event);
     }
 
-    public void peformTurn(Option option){
+    public void peformTurn(Option option) throws IOException{
         game.setOptionP1(option);
         game.setComputerOption();
         game.updatePlayerAtributes();
@@ -89,7 +92,7 @@ public class GameController implements Initializable {
     }
 
     public void setScore(){
-        game.incremateScore(game.getWinner());
+        game.incrementScore(game.getWinner());
         lScore.setText(game.getScore());
     }
 
@@ -101,9 +104,29 @@ public class GameController implements Initializable {
         }
     }
 
-    public void setOptions(){        
-        lOptionP1.setText(String.valueOf(game.getOptionP1()));
-        lOptionP2.setText(String.valueOf(game.getOptionP2()));
+    public String getPlayerOption(Player player){
+
+        switch (player.getOption()) {
+            case Scissors:
+                return "tesoura";
+            case Paper:
+                return "papel";
+            case Rock:
+                return "pedra";
+        }
+
+        return null;
+    }
+
+    public Image getImageOption(String option) throws IOException{
+        String path = "models/views/images/" + option + ".png";
+        return new Image(path);
+    }
+
+    public void setOptions() throws IOException{
+        ivChooseP1.setImage(getImageOption(getPlayerOption(game.getPlayer1())));  
+        ivChooseP2.setImage(getImageOption(getPlayerOption(game.getPlayer2())));
+
     }
 
     @Override

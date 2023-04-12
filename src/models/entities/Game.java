@@ -6,8 +6,6 @@ import models.enums.PlayerType;
 public class Game {
     private Player player1;
     private Player player2;
-    private Option optionP1;
-    private Option optionP2;
     private Integer scoreP1;
     private Integer scoreP2;
     private LeaderboardFile leaderboardFile;
@@ -35,20 +33,14 @@ public class Game {
         this.player2 = player2;
     }
 
-    public Option getOptionP1() {
-        return optionP1;
-    }
 
     public void setOptionP1(Option optionP1) {
-        this.optionP1 = optionP1;
+        player1.setOption(optionP1);;
     }
 
-    public Option getOptionP2() {
-        return optionP2;
-    }
 
     public void setOptionP2(Option optionP2) {
-        this.optionP2 = optionP2;
+        player2.setOption(optionP2);;
     }
 
     public Integer getScoreP1() {
@@ -71,7 +63,7 @@ public class Game {
         return String.format("%d X %d", scoreP1, scoreP2);
     }
 
-    public void incremateScore(Player winner) {
+    public void incrementScore(Player winner) {
         if(winner == null){
 
         }
@@ -87,12 +79,12 @@ public class Game {
     
     public Player getWinner(){
 
-        if(optionP1.equals(optionP2)){
+        if(player1.getOption().equals(player2.getOption())){
             return null;
         }
-        else if(optionP1 == Option.Paper && optionP2 == Option.Rock ||
-           optionP1 == Option.Rock && optionP2 == Option.Scissors ||
-           optionP1 == Option.Scissors && optionP2 == Option.Paper){
+        else if(player1.getOption() == Option.Paper && player2.getOption() == Option.Rock ||
+        player1.getOption() == Option.Rock && player2.getOption() == Option.Scissors ||
+        player1.getOption() == Option.Scissors && player2.getOption() == Option.Paper){
             return player1;
         }else{
             return player2;

@@ -66,12 +66,12 @@
             </ImageView>
             <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="295.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/pedra2.0.png" />
+                  <Image url="@images/pedra.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="520.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/tesoura2.0.png" />
+                  <Image url="@images/tesoura.png" />
                </image>
             </ImageView>
             <Label layoutX="396.0" layoutY="235.0" text="Ganha de">
@@ -81,17 +81,17 @@
             </Label>
             <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="295.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/tesoura2.0.png" />
+                  <Image url="@images/tesoura.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="520.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/papel2.0.png" />
+                  <Image url="@images/papel.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="295.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/papel2.0.png" />
+                  <Image url="@images/papel.png" />
                </image>
             </ImageView>
             <Label layoutX="396.0" layoutY="335.0" text="Ganha de">
@@ -101,10 +101,10 @@
             </Label>
             <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="520.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/pedra2.0.png" />
+                  <Image url="@images/pedra.png" />
                </image>
             </ImageView>
-            <Label layoutX="453.0" layoutY="378.0" text="© Tdos os direitos reservados L&amp;V" textFill="#bcbcbc" />
+            <Label layoutX="439.0" layoutY="378.0" text="© Todos os direitos reservados L&amp;V" textFill="#bcbcbc" />
          </children></AnchorPane>
    </children>
 </VBox>

@@ -143,7 +143,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Label layoutX="3.0" layoutY="476.0" text="© Tdos os direitos reservados L&amp;V" textFill="#bcbcbc" />
+            <Label layoutX="3.0" layoutY="476.0" text="© Todos os direitos reservados L&amp;V" textFill="#bcbcbc" />
          </children>
     </AnchorPane>
   </children>

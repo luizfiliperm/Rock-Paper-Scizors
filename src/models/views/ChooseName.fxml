@@ -101,7 +101,7 @@
                   <Image url="@images/player.png" />
                </image>
             </ImageView>
-            <Label layoutX="14.0" layoutY="469.0" text="© Tdos os direitos reservados L&amp;V" textFill="#bcbcbc" />
+            <Label layoutX="14.0" layoutY="469.0" text="© Todos os direitos reservados L&amp;V" textFill="#bcbcbc" />
          </children></AnchorPane>
   </children>
 </VBox>

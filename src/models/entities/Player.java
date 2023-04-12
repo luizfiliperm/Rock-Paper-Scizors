@@ -1,6 +1,7 @@
 package models.entities;
 
 
+import models.enums.Option;
 import models.enums.PlayerType;
 
 public class Player implements Comparable<Player>{
@@ -10,6 +11,7 @@ public class Player implements Comparable<Player>{
     private Integer looses;
     private Integer draws;
     private PlayerType playerType;
+    private Option option;
 
     // Construtor 
     public Player(String name, PlayerType playerType) {
@@ -59,6 +61,13 @@ public class Player implements Comparable<Player>{
         return playerType;
     }
     
+    public Option getOption() {
+        return option;
+    }
+
+    public void setOption(Option option) {
+        this.option = option;
+    }
 
     public void setWins(Integer wins) {
         this.wins = wins;

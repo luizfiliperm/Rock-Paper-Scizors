@@ -64,7 +64,7 @@
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/papel2.0.png" />
+                        <Image url="@images/papel.png" />
                      </image>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -82,7 +82,7 @@
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/tesoura2.0.png" />
+                        <Image url="@images/tesoura.png" />
                      </image>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -100,7 +100,7 @@
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/pedra2.0.png" />
+                        <Image url="@images/pedra.png" />
                      </image>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -153,22 +153,14 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Label fx:id="lOptionP1" alignment="CENTER" layoutX="44.0" layoutY="54.0" prefHeight="54.0" prefWidth="124.0">
-               <font>
-                  <Font size="22.0" />
-               </font>
-            </Label>
-            <Label fx:id="lOptionP2" alignment="CENTER" layoutX="633.0" layoutY="54.0" prefHeight="54.0" prefWidth="124.0">
-               <font>
-                  <Font size="22.0" />
-               </font>
-            </Label>
             <ImageView fitHeight="26.0" fitWidth="188.0" layoutX="308.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/vencedor.png" />
                </image>
             </ImageView>
-            <Label layoutX="14.0" layoutY="469.0" text="© Tdos os direitos reservados L&amp;V" textFill="#bcbcbc" />
+            <Label layoutX="14.0" layoutY="469.0" text="© Todos os direitos reservados L&amp;V" textFill="#bcbcbc" />
+            <ImageView fx:id="ivChooseP1" fitHeight="97.0" fitWidth="102.0" layoutX="120.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ivChooseP2" fitHeight="97.0" fitWidth="102.0" layoutX="575.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
          </children></AnchorPane>
   </children>
 </VBox>
