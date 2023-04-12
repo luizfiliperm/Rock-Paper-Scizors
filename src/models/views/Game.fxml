@@ -106,15 +106,8 @@
                <font>
                   <Font size="1.0" />
                </font>
-               <graphic>
-                  <ImageView fitHeight="26.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/vencedor.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
             </Label>
-            <Label fx:id="lwinnerName" contentDisplay="CENTER" layoutX="308.0" layoutY="432.0" prefHeight="54.0" prefWidth="151.0">
+            <Label fx:id="lwinnerName" contentDisplay="CENTER" layoutX="325.0" layoutY="432.0" prefHeight="54.0" prefWidth="151.0" textAlignment="CENTER">
                <font>
                   <Font size="22.0" />
                </font>
@@ -161,6 +154,11 @@
                   <Font size="22.0" />
                </font>
             </Label>
+            <ImageView fitHeight="26.0" fitWidth="188.0" layoutX="308.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/vencedor.png" />
+               </image>
+            </ImageView>
          </children></AnchorPane>
   </children>
 </VBox>
