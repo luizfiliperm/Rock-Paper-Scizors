@@ -69,6 +69,9 @@
                      <image>
                         <Image url="@images/sair.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                </graphic>
                <font>
@@ -94,6 +97,7 @@
                   <Image url="@images/medalha.png" />
                </image>
             </ImageView>
+            <Label layoutX="14.0" layoutY="462.0" text="© Tdos os direitos reservados L&amp;V" textFill="#bcbcbc" />
          </children>
       </AnchorPane>
    </children>

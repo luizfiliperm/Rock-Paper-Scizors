@@ -66,6 +66,9 @@
                      <image>
                         <Image url="@images/papel2.0.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                </graphic>
                <cursor>
@@ -81,6 +84,9 @@
                      <image>
                         <Image url="@images/tesoura2.0.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                </graphic>
                <cursor>
@@ -96,6 +102,9 @@
                      <image>
                         <Image url="@images/pedra2.0.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                </graphic>
                <cursor>
@@ -107,7 +116,7 @@
                   <Font size="1.0" />
                </font>
             </Label>
-            <Label fx:id="lwinnerName" contentDisplay="CENTER" layoutX="325.0" layoutY="432.0" prefHeight="54.0" prefWidth="151.0" textAlignment="CENTER">
+            <Label fx:id="lwinnerName" alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="432.0" prefHeight="54.0" prefWidth="151.0" textAlignment="CENTER">
                <font>
                   <Font size="22.0" />
                </font>
@@ -159,6 +168,7 @@
                   <Image url="@images/vencedor.png" />
                </image>
             </ImageView>
+            <Label layoutX="14.0" layoutY="469.0" text="© Tdos os direitos reservados L&amp;V" textFill="#bcbcbc" />
          </children></AnchorPane>
   </children>
 </VBox>

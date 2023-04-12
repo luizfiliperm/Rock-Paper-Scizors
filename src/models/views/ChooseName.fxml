@@ -75,7 +75,10 @@
                </graphic>
                <font>
                   <Font size="1.0" />
-               </font></Button>
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             <Button fx:id="btBacktoMenu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToMenu" style="-fx-background-color: none;" text="Voltar">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
@@ -89,12 +92,16 @@
                </graphic>
                <font>
                   <Font size="1.0" />
-               </font></Button>
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             <ImageView fitHeight="206.0" fitWidth="209.0" layoutX="594.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/player.png" />
                </image>
             </ImageView>
+            <Label layoutX="14.0" layoutY="469.0" text="© Tdos os direitos reservados L&amp;V" textFill="#bcbcbc" />
          </children></AnchorPane>
   </children>
 </VBox>

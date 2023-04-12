@@ -63,6 +63,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
+            <Label layoutX="14.0" layoutY="369.0" text="© Tdos os direitos reservados L&amp;V" textFill="#bcbcbc" />
          </children></AnchorPane>
    </children>
 </VBox>

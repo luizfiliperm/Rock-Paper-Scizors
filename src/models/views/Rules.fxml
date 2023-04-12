@@ -104,6 +104,7 @@
                   <Image url="@images/pedra2.0.png" />
                </image>
             </ImageView>
+            <Label layoutX="453.0" layoutY="378.0" text="© Tdos os direitos reservados L&amp;V" textFill="#bcbcbc" />
          </children></AnchorPane>
    </children>
 </VBox>
