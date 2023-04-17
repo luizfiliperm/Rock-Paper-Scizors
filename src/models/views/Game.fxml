@@ -41,23 +41,35 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fillWidth="false" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #f8f3bf;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="models.controllers.GameController">
-  <children>
-    <AnchorPane fx:id="root" maxHeight="-1.0" maxWidth="-1.0" prefHeight="550.0" prefWidth="964.0" VBox.vgrow="ALWAYS">
+<VBox fillWidth="false" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #f8f3bf;"
+   xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+   fx:controller="models.controllers.GameController">
+   <children>
+      <AnchorPane fx:id="root" maxHeight="-1.0" maxWidth="-1.0" prefHeight="550.0" prefWidth="964.0"
+         VBox.vgrow="ALWAYS">
+         <fx:define>
+            <Font fx:id="pixelFont" name="My Font"
+               size="14"
+               url="@/models/views/font/pixelmix.ttf" />
+         </fx:define>
          <children>
-            <Label layoutX="212.0" layoutY="202.0" prefHeight="97.0" prefWidth="196.0" text="Escolha sua jogada:">
+            <Label layoutX="212.0" layoutY="202.0" prefHeight="97.0" prefWidth="196.0"
+               text="Escolha sua jogada:" >
                <font>
                   <Font size="1.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="103.0" fitWidth="372.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="103.0" fitWidth="372.0" pickOnBounds="true"
+                     preserveRatio="true">
                      <image>
                         <Image url="@images/selecionar.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Label>
-            <Button fx:id="btPaper" layoutX="355.0" layoutY="283.0" mnemonicParsing="false" onAction="#choosePaper" prefHeight="83.0" prefWidth="87.0" style="-fx-background-color: none;" text="Papel">
+            <Button fx:id="btPaper" layoutX="355.0" layoutY="283.0" mnemonicParsing="false"
+               onAction="#choosePaper" prefHeight="83.0" prefWidth="87.0"
+               style="-fx-background-color: none;" text="Papel">
                <font>
                   <Font size="1.0" />
                </font>
@@ -65,7 +77,8 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                <graphic>
-                  <ImageView fitHeight="83.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="83.0" fitWidth="84.0" pickOnBounds="true"
+                     preserveRatio="true">
                      <image>
                         <Image url="@images/papel.png" />
                      </image>
@@ -75,7 +88,9 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btScissors" layoutX="473.0" layoutY="280.0" mnemonicParsing="false" onAction="#chooseScissors" prefHeight="90.0" prefWidth="87.0" style="-fx-background-color: none;" text="Tesoura">
+            <Button fx:id="btScissors" layoutX="473.0" layoutY="280.0" mnemonicParsing="false"
+               onAction="#chooseScissors" prefHeight="90.0" prefWidth="87.0"
+               style="-fx-background-color: none;" text="Tesoura">
                <font>
                   <Font size="1.0" />
                </font>
@@ -83,7 +98,8 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                <graphic>
-                  <ImageView fitHeight="75.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="75.0" fitWidth="72.0" pickOnBounds="true"
+                     preserveRatio="true">
                      <image>
                         <Image url="@images/tesoura.png" />
                      </image>
@@ -93,12 +109,15 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btRock" layoutX="222.0" layoutY="280.0" mnemonicParsing="false" onAction="#chooseRock" prefHeight="83.0" prefWidth="75.0" style="-fx-background-color: none;" text="Pedra">
+            <Button fx:id="btRock" layoutX="222.0" layoutY="280.0" mnemonicParsing="false"
+               onAction="#chooseRock" prefHeight="83.0" prefWidth="75.0"
+               style="-fx-background-color: none;" text="Pedra">
                <font>
                   <Font size="1.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="89.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="89.0" fitWidth="119.0" pickOnBounds="true"
+                     preserveRatio="true">
                      <image>
                         <Image url="@images/pedra.png" />
                      </image>
@@ -111,34 +130,41 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Label layoutX="288.0" layoutY="378.0" prefHeight="54.0" prefWidth="102.0" text="Vencedor:">
+            <Label layoutX="288.0" layoutY="378.0" prefHeight="54.0" prefWidth="102.0"
+               text="Vencedor:">
                <font>
                   <Font size="1.0" />
                </font>
             </Label>
-            <Label fx:id="lwinnerName" alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="432.0" prefHeight="54.0" prefWidth="151.0" textAlignment="CENTER">
+            <Label fx:id="lwinnerName" alignment="CENTER" contentDisplay="CENTER" layoutX="325.0"
+               layoutY="432.0" prefHeight="54.0" prefWidth="151.0" textAlignment="CENTER" font="$pixelFont">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
-            <Label fx:id="lPlayer2" layoutX="507.0" layoutY="39.0" prefHeight="54.0" prefWidth="165.0" text="Player2">
+            <Label fx:id="lPlayer2" layoutX="507.0" layoutY="39.0" prefHeight="54.0"
+               prefWidth="165.0" text="Player2" font="$pixelFont">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
-            <Label fx:id="lPlayer1" alignment="CENTER_RIGHT" layoutX="137.0" layoutY="39.0" prefHeight="54.0" prefWidth="165.0" text="Player1">
+            <Label fx:id="lPlayer1" alignment="CENTER_RIGHT" layoutX="137.0" layoutY="39.0"
+               prefHeight="54.0" prefWidth="165.0" text="Player1" font="$pixelFont">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
-            <Label fx:id="lScore" alignment="CENTER" layoutX="363.0" layoutY="50.0" prefHeight="32.0" prefWidth="75.0" text="0x0">
+            <Label fx:id="lScore" alignment="CENTER" layoutX="363.0" layoutY="50.0"
+               prefHeight="32.0" prefWidth="75.0" text="0x0" font="$pixelFont">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
-            <Button fx:id="btBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeToMenuScreen" style="-fx-background-color: none;" text="Voltar">
+            <Button fx:id="btBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false"
+               onAction="#changeToMenuScreen" style="-fx-background-color: none;" text="Voltar">
                <graphic>
-                  <ImageView fitHeight="40.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="40.0" fitWidth="41.0" pickOnBounds="true"
+                     preserveRatio="true">
                      <image>
                         <Image url="@images/sair.png" />
                      </image>
@@ -152,15 +178,21 @@
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
-               </cursor></Button>
-            <ImageView fitHeight="26.0" fitWidth="188.0" layoutX="308.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+               </cursor>
+            </Button>
+            <ImageView fitHeight="26.0" fitWidth="188.0" layoutX="308.0" layoutY="386.0"
+               pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/vencedor.png" />
                </image>
             </ImageView>
-            <Label layoutX="14.0" layoutY="469.0" text="© Todos os direitos reservados L&amp;V" textFill="#bcbcbc" />
-            <ImageView fx:id="ivChooseP1" fitHeight="97.0" fitWidth="102.0" layoutX="219.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ivChooseP2" fitHeight="97.0" fitWidth="102.0" layoutX="466.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" />
-         </children></AnchorPane>
-  </children>
+            <Label layoutX="14.0" layoutY="469.0" text="© Todos os direitos reservados L&amp;V"
+               textFill="#bcbcbc" />
+            <ImageView fx:id="ivChooseP1" fitHeight="97.0" fitWidth="102.0" layoutX="219.0"
+               layoutY="117.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ivChooseP2" fitHeight="97.0" fitWidth="102.0" layoutX="466.0"
+               layoutY="117.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
 </VBox>
