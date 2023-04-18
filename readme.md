@@ -8,8 +8,8 @@ Este é jogo de pedra, papel e tesoura desenvolvido em Java, para um projeto da 
    ## JavaFx na versão 17.0.6 ( Adcione as lib do javaFx no projeto )
 
 # Como jogar
-   ## Abra o arquivo “Main.java” no seu editor de código Java preferido.
-   ## Compile e execute o programa.
+   ### Abra o arquivo “Main.java” no seu editor de código Java preferido.
+   ### Compile e execute o programa.
    ## Digite o nome do jogador quando for solicitado.
    ## Escolha entre as três opções (pedra, papel, ou tesoura), clicando nas imagens.
    ## O computador escolhera sua jogada aleatoriamente.
